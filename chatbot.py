@@ -28,7 +28,7 @@ def ask_question(question: str) -> str:
         {question}
         """
         response = client.models.generate_content(
-            model="gemini-3.5-flash",
+            model="gemini-2.5-flash",
             contents=prompt_structure
         )
         return response.text
@@ -56,7 +56,7 @@ def generate_farming_tips(crop: str, fertilizer: str, ph: float, soil_type: str)
         Keep the answer under 100 words and use simple language.
         """
         response = client.models.generate_content(
-            model="gemini-3.5-flash",
+            model="gemini-2.5-flash",
             contents=prompt_structure
         )
         return response.text
